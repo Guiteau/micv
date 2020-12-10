@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<SplitPane fx:id="contactoView" dividerPositions="0.335, 0.665" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+  <items>
+      <TitledPane animated="false" collapsible="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Teléfonos">
+        <content>
+          <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="87.0" prefWidth="596.0">
+               <children>
+                  <TableView fx:id="tableView_telefono" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="1.0">
+                    <columns>
+                      <TableColumn fx:id="tableColumnNumeroTelefono" prefWidth="125.0" text="Número" />
+                      <TableColumn fx:id="tableColumnTipoTelefono" prefWidth="125.0" text="Tipo" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="buttonAniadir_telefono" alignment="CENTER" contentDisplay="CENTER" layoutX="535.0" layoutY="4.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onButtonAniadirTelefefonoAction" prefHeight="25.0" prefWidth="64.0" text="Añadir" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0" />
+                  <Button fx:id="buttonEliminar_telefono" alignment="CENTER" contentDisplay="CENTER" layoutX="535.0" layoutY="34.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onButtonEliminarTelefonoAction" prefHeight="25.0" prefWidth="64.0" text="Eliminar" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="30.0" />
+               </children></AnchorPane>
+        </content>
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </padding>
+      </TitledPane>
+      <TitledPane animated="false" collapsible="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Direcciones de correo">
+        <content>
+          <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="tableView_correo" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="1.0">
+                    <columns>
+                      <TableColumn fx:id="tableColumnEmail" prefWidth="300.0" text="E-mail" />
+                      <TableColumn prefWidth="200.80003051757808" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="buttonAniadir_correo" alignment="CENTER" contentDisplay="CENTER" layoutX="532.0" layoutY="2.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onButtonAniadirCorreoAction" prefHeight="25.0" prefWidth="64.0" text="Añadir" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0" />
+                  <Button fx:id="buttonEliminar_correo" alignment="CENTER" contentDisplay="CENTER" layoutX="532.0" layoutY="32.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#OnButtonEliminarCorreoAction" prefHeight="25.0" prefWidth="64.0" text="Eliminar" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="30.0" />
+               </children></AnchorPane>
+        </content>
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </padding>
+      </TitledPane>
+      <TitledPane animated="false" collapsible="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Webs">
+        <content>
+          <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="tableView_web" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="1.0">
+                    <columns>
+                      <TableColumn fx:id="tableColumnURL" prefWidth="300.0" text="URL" />
+                      <TableColumn prefWidth="200.80003051757808" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="buttonAniadir_url" alignment="CENTER" contentDisplay="CENTER" layoutX="535.0" layoutY="4.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onButtonAniadirURLAction" prefHeight="25.0" prefWidth="64.0" text="Añadir" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0" />
+                  <Button fx:id="buttonEliminar_url" alignment="CENTER" contentDisplay="CENTER" layoutX="535.0" layoutY="34.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onButtonEliminarURLAction" prefHeight="25.0" prefWidth="64.0" text="Eliminar" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="30.0" />
+               </children></AnchorPane>
+        </content>
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </padding>
+      </TitledPane>
+  </items>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</SplitPane>
